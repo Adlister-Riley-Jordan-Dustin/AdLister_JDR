@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    name VARCHAR(240) NOT NULL,
+    username VARCHAR(240) NOT NULL,
     email VARCHAR(240) NOT NULL,
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
@@ -19,7 +19,7 @@ CREATE TABLE ads  (
     FOREIGN KEY (user_id) REFERENCES users(id)
         ON DELETE CASCADE
 );
-INSERT INTO users(name, email, password)
+INSERT INTO users(username, email, password)
 VALUES
     ('jordierw', 'jordan@gmail.com', 'password'),
     ('rileyk', 'riley@gmail.com', 'password'),
