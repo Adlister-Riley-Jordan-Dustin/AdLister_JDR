@@ -72,15 +72,17 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
-    public Ad findByUserId (String userId) {
-        String query = "SELECT * FROM ads WHERE user_id = 4 LIMIT 1";
+    @Override
+    public List<Ad> findByUserId (String userId) {
+        String query = "SELECT * FROM ads WHERE user_id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, userId);
-            return extractAd(stmt.executeQuery());
+            return createAdsFromResults(stmt.executeQuery());
         } catch (SQLException e) {
             throw new RuntimeException("Error finding a ad by user id", e);
         }
     }
+
     }
 
