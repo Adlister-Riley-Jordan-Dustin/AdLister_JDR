@@ -19,6 +19,6 @@
         </div>
     </c:forEach>
 </div>
-
+<%--THIS IS A COMMENT--%>
 </body>
 </html>
