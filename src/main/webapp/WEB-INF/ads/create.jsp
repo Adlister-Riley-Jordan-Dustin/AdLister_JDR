@@ -17,6 +17,10 @@
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
+            <form action="/action">
+                <input type="file" id="myFile" name="filename">
+                <input type="submit">
+            </form>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>

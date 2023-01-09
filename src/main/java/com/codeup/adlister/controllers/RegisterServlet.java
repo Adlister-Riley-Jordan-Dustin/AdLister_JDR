@@ -32,7 +32,10 @@ public class RegisterServlet extends HttpServlet {
             response.sendRedirect("/register");
             return;
         }
-
+        boolean usernameInvalid = Boolean.parseBoolean(request.getParameter("username"));
+        if(usernameInvalid){
+            response.sendRedirect("/register");
+        }
 
         // create and save a new user
         User user = new User(username, email, password);
