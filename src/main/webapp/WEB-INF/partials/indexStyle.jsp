@@ -204,8 +204,20 @@
         width: 100px;
     }
 /*    END OF LOGIN PAGE*/
-/*    START OF PROFILE PAGE*/
-
+/*    START OF REGISTER PAGE*/
+    .register{
+        display: flex;
+        flex-direction: column;
+        padding: 100px;
+        justify-content: space-evenly;
+    }
+    .register-text{
+        font-size: 50px;
+        letter-spacing: 25px;
+        padding: 10px;
+        color: darkorange;
+        text-shadow:  2px 2px 3px #d22d09;
+    }
 
 </style>
 

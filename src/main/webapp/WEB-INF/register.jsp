@@ -2,14 +2,15 @@
 <html>
 <head>
     <jsp:include page="partials/head.jsp">
-        <jsp:param name="title" value="Register For Our Site!" />
+        <jsp:param name="title" value="Register For Our Site!"/>
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="partials/navbar.jsp" />
-    <jsp:include page="/WEB-INF/partials/indexStyle.jsp" />
-    <div class="container">
-        <h1>Please fill in your information.</h1>
+<jsp:include page="partials/navbar.jsp"/>
+<jsp:include page="/WEB-INF/partials/indexStyle.jsp"/>
+<div class="container">
+    <div class="register">
+        <h1 class="register-text">Please fill in your information.</h1>
         <form action="/register" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
@@ -30,5 +31,6 @@
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
+</div>
 </body>
 </html>
