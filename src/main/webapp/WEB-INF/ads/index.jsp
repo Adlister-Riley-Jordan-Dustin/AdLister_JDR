@@ -9,7 +9,7 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <jsp:include page="/WEB-INF/partials/indexStyle.jsp"/>
-
+<h1 class="logo">JUNK LISTER</h1>
 <div class="container">
     <div class="description">
         <div class="about">
@@ -21,7 +21,7 @@
                 ratione sequi ullam.</p>
         </div>
         <div class="sell">
-            <img src="${pageContext.request.contextPath}/WEB-INF/img/IMG_1251.jpeg">
+            <img src="${pageContext.request.contextPath}/WEB-INF/img/IMG_1251.jpeg" alt="" sizes="100">
             <h2>what we sell</h2>
             <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dignissimos distinctio et, ex
@@ -38,10 +38,17 @@
         </div>
     </div>
 </div>
-
+<hr>
+<div class="tagline">
+    <div class="tag">
+        <h2 class="tagTxt">-THIS IS WHERE A TAGLINE GOES-</h2>
+    </div>
+</div>
+<hr style="width: 400px">
+<p class="listings">VIEW LISTINGS BELOW</p>
 <div class="container-two">
     <div class="ads-direction">
-        <div class="ads">
+        <div class="ads" id="ads-two">
             <c:forEach var="ad" items="${ads}">
                 <div class="ads" id="ads">
                     <h2>${ad.title}</h2>
@@ -52,16 +59,8 @@
         </div>
     </div>
 </div>
-
-<footer>
-
-</footer>
+<hr>
+<jsp:include page="/WEB-INF/partials/footer.jsp"/>
 <%--THIS IS A COMMENT--%>
 </body>
 </html>
-.description{
-margin-top: 30px;
-display: flex;
-flex-direction: row;
-padding:30px;
-}

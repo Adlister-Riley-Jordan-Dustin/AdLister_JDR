@@ -1,17 +1,21 @@
-<jsp:include page="indexStyle.jsp"/>
-<nav class="navbar">
+<%--
+  Created by IntelliJ IDEA.
+  User: jordanwitt
+  Date: 1/10/23
+  Time: 4:42 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<footer class="footers">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/ads">Junk Lister</a>
-        </div>
-
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="foot navbar-nav navbar-right">
             <%--<input type="text" id="search" placeholder="search">--%>
-                <form method="POST" action="/ads">
-                    <label for="searchBar"> Ad Search</label>
-                    <input  type="search" id="searchBar" name="adBar" placeholder="Search for Ads">
-                </form>
             <li><a href="/login">Login</a></li>
             <li><a href="/logout">Logout</a></li>
             <li><a href="/register">Register</a></li>
@@ -20,8 +24,8 @@
                 <button> Search </button>--%>
             </li>
         </ul>
-
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
-</nav>
-<hr>
+</footer>
+</body>
+</html>
