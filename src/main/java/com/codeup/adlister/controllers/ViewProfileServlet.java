@@ -19,6 +19,23 @@ public class ViewProfileServlet extends HttpServlet {
         }
         User user = (User) request.getSession().getAttribute("user");
         request.setAttribute("ads", DaoFactory.getAdsDao().findByUserId(String.valueOf(user.getId())));
+
         request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String username = request.getParameter("updateUsername");
+        String email = request.getParameter("updateEmail");
+        User user = (User) request.getSession().getAttribute("user");
+        DaoFactory.getUsersDao().updateByUsername(username,email, user.getUsername());
+        User newUser = DaoFactory.getUsersDao().findByUsername(username);
+        request.getSession().setAttribute("user", newUser);
+
+        System.out.println(username);
+        System.out.println(email);
+        System.out.println(user.getUsername());
+//        request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
+        response.sendRedirect("/profile");
     }
 }

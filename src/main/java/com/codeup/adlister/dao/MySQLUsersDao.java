@@ -3,7 +3,6 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
-import java.awt.*;
 import java.sql.*;
 
 public class MySQLUsersDao implements Users {
@@ -22,6 +21,19 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    @Override
+    public void updateByUsername(String updateUsername, String updateEmail, String userName) {
+        String query = "update users set username = ?, email = ? where username = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, updateUsername);
+            stmt.setString(2, updateEmail);
+            stmt.setString(3, userName);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding a user by username", e);
+        }
+    }
 
     @Override
     public User findByUsername(String username) {
@@ -34,6 +46,7 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error finding a user by username", e);
         }
     }
+
 
     @Override
     public Long insert(User user) {
@@ -50,11 +63,6 @@ public class MySQLUsersDao implements Users {
         } catch (SQLException e) {
             throw new RuntimeException("Error creating new user", e);
         }
-    }
-
-    @Override
-    public User generateImage(Image image) {
-        return null;
     }
 
     private User extractUser(ResultSet rs) throws SQLException {
