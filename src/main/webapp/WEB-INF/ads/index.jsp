@@ -18,9 +18,22 @@
 
     </h1>
 </div>
+<div class="center-two">
+    <h1>
+        <span>some things for sale</span>
+        <span>some things for sale</span>
+        <span>some things for sale</span>
+    </h1>
+</div>
+<div class="center-three" id="center-two">
+    <h1 class="things-two">
+        <span>all of the things</span>
+        <span>all of the things</span>
+        <span>all of the things</span>
+    </h1>
+</div>
 <div class="container">
-    <h1>some things for sale</h1>
-
+    </div>
     <c:forEach var="ad" items="${ads}">
         <div class="ads" id="ads">
             <h2>${ad.title}</h2>
