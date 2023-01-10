@@ -5,6 +5,7 @@
       <a class="navbar-brand" href="/ads">Adlister</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
+      <input type="text" id="search" placeholder="search">
       <li><a href="/profile">Profile</a></li>
       <li><a href="/logout">Logout</a></li>
       <li><a href="/ads/create">Create</a></li>

@@ -18,6 +18,15 @@
     body{
         background-color: darkorange;
     }
+    #search{
+        padding: 5px;
+        margin: 10px 10px 5px 5px;
+        border-right: 5px;
+        background-color: darkorange;
+        color: white;
+        border-style: hidden;
+
+    }
   h1{
     color: black;
       text-align: center;
