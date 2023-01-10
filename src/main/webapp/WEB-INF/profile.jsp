@@ -8,7 +8,6 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbarProfile.jsp" />
-    <jsp:include page="/WEB-INF/partials/indexStyle.jsp" />
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
         <c:forEach var="ad" items="${ads}">

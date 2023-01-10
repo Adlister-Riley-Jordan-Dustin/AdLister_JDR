@@ -9,9 +9,11 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <jsp:include page="/WEB-INF/partials/indexStyle.jsp" />
-
+<header>
+    <h1> JUNK LISTER </h1>
+</header>
 <div class="container">
-    <h1>Here Are all the ads!</h1>
+    <h1>some things for sale</h1>
 
     <c:forEach var="ad" items="${ads}">
         <div class="ads" id="ads">

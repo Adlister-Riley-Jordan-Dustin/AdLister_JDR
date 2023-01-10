@@ -18,6 +18,17 @@
     body{
         background-color: darkorange;
     }
+
+    header{
+        box-sizing: border-box;
+        height: 300px;
+        background-color: white;
+        backdrop-filter: opacity(30%);
+        margin-top: -20px;
+    }
+    header h1{
+        font-size: 100px;
+    }
     #search{
         padding: 5px;
         margin: 10px 10px 5px 5px;
