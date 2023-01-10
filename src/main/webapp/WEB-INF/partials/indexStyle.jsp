@@ -169,6 +169,42 @@
     footer a:hover{
         color: #5E17EB;
     }
+/*END OF INDEX PAGE STYLING*/
+/*    START OF LOGIN PAGE STYLING*/
+    .form{
+        display: flex;
+        flex-direction: column;
+        padding: 100px;
+    }
+    .form-info{
+        align-items: center;
+        text-align: center;
+    }
+    .login{
+        font-size: 50px;
+        letter-spacing: 25px;
+        padding: 10px;
+        color: darkorange;
+        text-shadow:  2px 7px 2px #d22d09;
+    }
+    label{
+        letter-spacing: 5px;
+    }
+    input{
+        background-color: darkorange;
+        color: white;
+        border-radius: 2px;
+        box-shadow:   1px 2px 2px 2px #d22d09;
+        border-style: none;
+        height: 20px;
+        width: 260px;
+        margin: 10px;
+    }
+    .btn{
+        width: 100px;
+    }
+/*    END OF LOGIN PAGE*/
+/*    START OF PROFILE PAGE*/
 
 
 </style>
