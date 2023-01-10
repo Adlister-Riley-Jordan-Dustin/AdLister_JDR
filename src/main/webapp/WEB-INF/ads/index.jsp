@@ -59,3 +59,9 @@
 <%--THIS IS A COMMENT--%>
 </body>
 </html>
+.description{
+margin-top: 30px;
+display: flex;
+flex-direction: row;
+padding:30px;
+}

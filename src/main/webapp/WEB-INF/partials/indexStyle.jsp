@@ -54,7 +54,7 @@
     .header-area{
         margin-top: 50px;
     }
-    #search{
+    #searchBar{
         text-align: center;
         margin: 10px 10px 5px 5px;
         border-radius: 10px;
@@ -62,7 +62,7 @@
         color: white;
         border-style: hidden;
     }
-    #search::placeholder{
+    #searchBar::placeholder{
         color: white;
     }
   h1{
