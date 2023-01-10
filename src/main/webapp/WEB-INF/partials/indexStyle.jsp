@@ -15,13 +15,24 @@
     *{
         font-family: monospace;
     }
-    .navbar{
+    .nav{
         color: darkorange;
-        display: grid;
+        display: flex;
+        margin-bottom:100px;
+    }
+    .navbar{
+        flex-direction: row;
+        padding: 10px;
+        float: top;
+        justify-content: space-between;
     }
     .navbar a{
         color: white;
         text-decoration: none;
+        justify-content: space-between;
+        padding: 10px;
+        float: left;
+        font-size: 15px;
     }
     body{
         background-color: darkorange;
@@ -80,10 +91,10 @@
         color:#fff;
     }
     #search{
-        padding: 5px;
+        text-align: center;
         margin: 10px 10px 5px 5px;
         border-right: 5px;
-        background-color: darkorange;
+        background-color: #ff5900;
         color: white;
         border-style: hidden;
 
