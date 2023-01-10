@@ -15,6 +15,14 @@
     *{
         font-family: monospace;
     }
+    .navbar{
+        color: darkorange;
+        display: grid;
+    }
+    .navbar a{
+        color: white;
+        text-decoration: none;
+    }
     body{
         background-color: darkorange;
     }
