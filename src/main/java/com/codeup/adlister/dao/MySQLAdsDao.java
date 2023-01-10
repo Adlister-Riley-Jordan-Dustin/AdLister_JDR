@@ -1,9 +1,6 @@
 package com.codeup.adlister.dao;
-
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
-
-import java.awt.*;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,9 +12,9 @@ public class MySQLAdsDao implements Ads {
         try {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
-                config.getUrl(),
-                config.getUser(),
-                config.getPassword()
+                    config.getUrl(),
+                    config.getUser(),
+                    config.getPassword()
             );
         } catch (SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
@@ -44,7 +41,6 @@ public class MySQLAdsDao implements Ads {
             stmt.setLong(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
             stmt.setString(3, ad.getDescription());
-//            stmt.setBlob(4, (Blob) ad.getImage());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
@@ -54,27 +50,12 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-//    @Override
-//    public List<Ad> generateImg(Image image) {
-//        {
-//            String query = "SELECT * FROM ads WHERE img = ?";
-//            try {
-//                PreparedStatement stmt = connection.prepareStatement(query);
-//                stmt.setString(1,  "image");
-//                return createAdsFromResults(stmt.executeQuery());
-//            } catch (SQLException e) {
-//                throw new RuntimeException("Error finding a ad by user id", e);
-//            }
-//        }
-//    }
-
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
-            rs.getLong("id"),
-            rs.getLong("user_id"),
-            rs.getString("title"),
-            rs.getString("description")
-//            (Image) rs.getBlob("image")
+                rs.getLong("id"),
+                rs.getLong("user_id"),
+                rs.getString("title"),
+                rs.getString("description")
         );
     }
 
@@ -96,18 +77,6 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error finding a ad by user id", e);
         }
     }
-
-//    @Override
-//    public Object generateImg(String image) {
-//        String query = "SELECT * FROM ads WHERE img = ?";
-//        try {
-//            PreparedStatement stmt = connection.prepareStatement(query);
-//            stmt.setString(1,  "image");
-//            return createAdsFromResults(stmt.executeQuery());
-//        } catch (SQLException e) {
-//            throw new RuntimeException("Error finding a ad by user id", e);
-//        }
-//    }
 
 }
 
