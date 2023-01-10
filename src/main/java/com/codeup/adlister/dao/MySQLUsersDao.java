@@ -3,6 +3,7 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
+import java.awt.*;
 import java.sql.*;
 
 public class MySQLUsersDao implements Users {
@@ -49,6 +50,11 @@ public class MySQLUsersDao implements Users {
         } catch (SQLException e) {
             throw new RuntimeException("Error creating new user", e);
         }
+    }
+
+    @Override
+    public User generateImage(Image image) {
+        return null;
     }
 
     private User extractUser(ResultSet rs) throws SQLException {

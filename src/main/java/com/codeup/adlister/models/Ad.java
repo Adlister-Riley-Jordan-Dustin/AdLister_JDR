@@ -7,18 +7,21 @@ public class Ad {
     private long userId;
     private String title;
     private String description;
+    private Image image;
 
     public Ad(long id, long userId, String title, String description) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
+//        this.image = image;
     }
 
     public Ad(long userId, String title, String description) {
         this.userId = userId;
         this.title = title;
         this.description = description;
+//        this.image = image;
     }
 
     public long getId() {
@@ -52,4 +55,11 @@ public class Ad {
     public void setDescription(String description) {
         this.description = description;
     }
+//    public Image getImage(){
+//        return image;
+//    }
+//
+//    public void setImage(Image image) {
+//        this.image = image;
+//    }
 }
