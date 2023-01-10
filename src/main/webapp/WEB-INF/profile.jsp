@@ -5,6 +5,7 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Your Profile" />
     </jsp:include>
+    <jsp:include page="/WEB-INF/partials/indexStyle.jsp"/>
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbarProfile.jsp" />

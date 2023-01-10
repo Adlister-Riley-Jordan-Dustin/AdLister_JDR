@@ -100,30 +100,17 @@
   .ads-direction{
       margin-top: 30px;
       display: flex;
-      flex-direction: row;
+      flex-direction: row;!important;
       padding:30px;
   }
     #ads{
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
-      transition: 0.3s;
-      text-align: center;
+        margin: 10px;
+        background-color: white;
+        padding: 20px;
+        text-align: center;
   }
-  #ads h2{
-      color: black;
-      box-sizing: border-box;
-      background-color: white;
-      height: 50px;
-      width: 100%;
-     text-align: center;
-      padding: 5px;
-  }
-  #ads p{
-     color: black;
-      background-color: azure;
-      box-sizing: border-box;
-      height: 150px;
-      padding: 15px;
-  }
+
+
 </style>
 
 

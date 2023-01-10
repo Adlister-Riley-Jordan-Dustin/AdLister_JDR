@@ -37,7 +37,7 @@
                 quibusdam recusandae sed.</p>
         </div>
     </div>
-
+</div>
 
 <div class="container-two">
     <div class="ads-direction">
@@ -45,13 +45,14 @@
             <c:forEach var="ad" items="${ads}">
                 <div class="ads" id="ads">
                     <h2>${ad.title}</h2>
+                    <hr>
                     <p>${ad.description}</p>
                 </div>
             </c:forEach>
         </div>
     </div>
 </div>
-</div>
+
 <footer>
 
 </footer>
