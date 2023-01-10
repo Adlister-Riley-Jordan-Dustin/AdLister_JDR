@@ -3,18 +3,15 @@ package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
+
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
-import java.awt.*;
 import java.io.IOException;
 
 @WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/ads/create")
-//@MultipartConfig(maxFileSize = 16177215)
 public class CreateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") == null) {
@@ -22,17 +19,15 @@ public class CreateAdServlet extends HttpServlet {
             return;
         }
         request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
-            .forward(request, response);
-
+                .forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
         Ad ad = new Ad(
-            user.getId(),
-            request.getParameter("title"),
-            request.getParameter("description")
-//            (Image) request.getPart("image")
+                user.getId(),
+                request.getParameter("title"),
+                request.getParameter("description")
         );
         DaoFactory.getAdsDao().insert(ad);
         response.sendRedirect("/ads");
