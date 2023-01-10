@@ -2,7 +2,6 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
 
-import java.awt.*;
 import java.util.List;
 
 public interface Ads {
@@ -12,8 +11,4 @@ public interface Ads {
     List<Ad> findByUserId(String userId);
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
-
-//    List<Ad> generateImg (Image image);
-//
-//    Object generateImg(String image);
 }
