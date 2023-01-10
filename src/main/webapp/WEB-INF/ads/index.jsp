@@ -9,9 +9,15 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <jsp:include page="/WEB-INF/partials/indexStyle.jsp" />
-<header>
-    <h1> JUNK LISTER </h1>
-</header>
+<div class="center">
+    <h1>
+        <span>Things</span>
+
+        <span>Things</span>
+        <span>Things</span>
+
+    </h1>
+</div>
 <div class="container">
     <h1>some things for sale</h1>
 
