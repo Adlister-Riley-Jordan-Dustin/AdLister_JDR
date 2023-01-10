@@ -35,6 +35,7 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+
     @Override
     public Long insert(User user) {
         String query = "INSERT INTO users(username, email, password) VALUES (?, ?, ?)";
@@ -52,11 +53,11 @@ public class MySQLUsersDao implements Users {
         }
     }
 
-    @Override
-    public User generateImage(Image image) {
-        return null;
-    }
-
+//    @Override
+//    public User generateImage(Image image) {
+//        return null;
+//    }
+//
     private User extractUser(ResultSet rs) throws SQLException {
         if (! rs.next()) {
             return null;
