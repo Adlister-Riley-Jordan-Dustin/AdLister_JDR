@@ -252,8 +252,107 @@
         display: flex;
         flex-direction: row;
     }
+/*    CREATE PAGE*/
+    .create{
+        display: flex;
+        flex-direction: column;
+        padding: 100px;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .create-text{
+        font-size: 50px;
+        letter-spacing: 25px;
+        padding: 10px;
+        color: darkorange;
+        text-shadow:  2px 3px 4px #d22d09;
+        text-align: center;
+    }
+    textarea{
+        background-color: darkorange;
+        color: white;
+        border-radius: 2px;
+        box-shadow:   1px 2px 2px 2px #d22d09;
+        border-style: none;
+        height: 100px;
+        width: 260px;
+        margin: 10px;
+    }
 
+/*    MODAL ON PROFILE PAGE*/
+    #myBtn{
+        margin-top: 90%;
+        background-color: darkorange;
+        color:white;
+        border-radius: 5px;
+        border-style: none;
+        box-shadow: 2px 2px #d22d09;
+    }
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
 </style>
+<script>
+<%--    MODAL JS--%>
+let modal = document.getElementById("myModal");
+
+
+let btn = document.getElementById("myBtn");
+
+
+let span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+</script>
+
 
 
 
