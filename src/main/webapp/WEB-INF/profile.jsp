@@ -6,6 +6,7 @@
         <jsp:param name="title" value="Your Profile"/>
     </jsp:include>
     <jsp:include page="/WEB-INF/partials/indexStyle.jsp"/>
+    <jsp:include page="/WEB-INF/partials/modal_js.jsp"/>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbarProfile.jsp"/>
@@ -33,10 +34,10 @@
             <h2>${ad.title}</h2>
             <hr>
             <p>${ad.description}</p>
-            <button id="myBtn">Update Ad</button>
-            <div class="modal">
+            <button id="update-btn">Update Ad</button>
+            <div class="modal" id="modal">
                 <div class="modal-content">
-                    <span class="close">&times;</span>
+                    <span class="close-modal">&times;</span>
                     <form action="/profile" method="post">
                         <label for="updateAd">Update Ad</label>
                         <input type="text" name="updateAd" id="updateAd">

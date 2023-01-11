@@ -280,8 +280,8 @@
     }
 
 /*    MODAL ON PROFILE PAGE*/
-    #myBtn{
-        margin-top: 90%;
+    #update-btn{
+        margin-top: 70%;
         background-color: darkorange;
         color:white;
         border-radius: 5px;
@@ -311,51 +311,32 @@
     }
 
     /* The Close Button */
-    .close {
+    .close-modal {
         color: #aaa;
         float: right;
         font-size: 28px;
         font-weight: bold;
     }
 
-    .close:hover,
-    .close:focus {
+    .close-modal:hover,
+    .close-modal:focus {
         color: black;
         text-decoration: none;
         cursor: pointer;
     }
 </style>
 <script>
-<%--    MODAL JS--%>
-let modal = document.getElementById("myModal");
+    const modal = document.getElementById("modal");
+    const updateBtn = document.getElementById("update-btn");
+    const closeModal = document.getElementById("close-modal");
 
-
-let btn = document.getElementById("myBtn");
-
-
-let span = document.getElementsByClassName("close")[0];
-
-
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
+    updateBtn.addEventListener("click", function() {
+        modal.style.display = "block";
+    });
+    closeModal.addEventListener("click", function() {
         modal.style.display = "none";
-    }
-}
-
+    });
 </script>
-
-
-
-
 
 <body>
 
