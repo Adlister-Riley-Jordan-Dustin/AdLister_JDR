@@ -102,13 +102,13 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error finding a ad by title", e);
         }
     }
-    public void updateAd (String title, String description, String addTitle) {
-        String query = "update ads set title = ?, description = ? where title = ?";
+    public void updateAd (String title, String description, Long id) {
+        String query = "update ads set title = ?, description = ? where id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, title);
             stmt.setString(2, description);
-            stmt.setString(3, addTitle);
+            stmt.setLong(3, id);
             stmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error finding a user by username", e);

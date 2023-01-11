@@ -14,7 +14,7 @@ public interface Ads {
 
     List<Ad> findByTitle(String title);
 
-   void updateAd (String title, String description, String addTitle);
+   void updateAd (String title, String description, Long id);
 
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);

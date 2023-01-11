@@ -24,7 +24,7 @@
                 <label for="updateEmail">Update Email</label>
                 <input type="email" name="updateEmail" id="updateEmail">
                 <br>
-                <input type="submit" value="update">
+                <input name="updateUser" type="submit" value="update">
             </form>
         </div>
     </div>
@@ -45,7 +45,7 @@
                             <label for="updateDescription">Update Description</label>
                             <input type="text" name="updateDescription" id="updateDescription">
                             <br>
-                            <input type="submit" value="update">
+                            <button name="updateAd" type="submit" value="${ad.id}">Update Ad</button>
                         </form>
                     </div>
                 </div>
