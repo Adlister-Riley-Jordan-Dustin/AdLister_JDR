@@ -32,12 +32,12 @@
         <c:forEach var="ad" items="${ads}">
             <div class="ads" id="ads">
                 <form action="/profile" method="post">
-                <button type="submit" value="${ad.id}" name="deleteAd" class="delete" id="delete">delete</button>
+                    <button type="submit" value="${ad.id}" name="deleteAd" class="delete" id="delete">delete</button>
                 </form>
                 <h2>${ad.title}</h2>
                 <hr>
                 <p>${ad.description}</p>
-                <button id="update-btn">Update Ad</button>
+                <button class="update-btn">Update Ad</button>
                 <div class="modal" id="modal">
                     <div class="modal-content">
                         <span class="close-modal" id="close-modal">&times;</span>
@@ -55,27 +55,27 @@
             </div>
         </c:forEach>
     </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
     <script>
+        window.addEventListener("load", (e) => {
+            let modal = document.getElementById("modal");
+            let updateBtn = document.getElementsByClassName("update-btn");
+            let closeModal = document.getElementById("close-modal");
 
-        window.addEventListener("load", (e) =>{
-            console.log("hello")
-
-            const modal = document.getElementById("modal");
-            const updateBtn = document.getElementById("update-btn");
-            const closeModal = document.getElementById("close-modal");
-
-
-            updateBtn.addEventListener("click", function() {
-                modal.style.display = "block";
-            });
-
-            closeModal.addEventListener("click", function() {
+            Array.from(updateBtn).forEach(function (updateBtn){
+                updateBtn.addEventListener("click", function () {
+                    modal.style.display = "block";
+                })
+            })
+            closeModal.addEventListener("click", function () {
                 modal.style.display = "none";
-            });
-
-        })
+            })
+        });
 
     </script>
+
     <script src="${pageContext.request.contextPath}/js/modal_js.js"></script>
 </div>
 </body>
