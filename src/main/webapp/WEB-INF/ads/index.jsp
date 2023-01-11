@@ -16,32 +16,26 @@
             <img src="${pageContext.request.contextPath}/img/Garage-sale.png" alt="" style="width: 100%">
             <h2>what we do</h2>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eligendi excepturi facilis fugiat minus
-                nisi perferendis tempore ullam! Accusamus accusantium esse ex impedit magnam necessitatibus odit quas
-                ratione sequi ullam.</p>
+            <p>At our junk store, we specialize in providing a unique shopping experience for those who appreciate the beauty in the unique and unusual. We offer a wide range of reclaimed, vintage, and one-of-a-kind items that are sure to add character and personality to any space. From rustic furniture and home decor to vintage collectibles and unique trinkets, we have something for everyone. Our store is constantly changing and evolving, as we are always on the hunt for new and exciting pieces to add to our collection. Come visit us and see for yourself why we're the destination for those who appreciate the beauty in the unexpected.</p>
         </div>
         <div class="sell">
             <img src="${pageContext.request.contextPath}/img/l9qx5sefaygqnksstkrt.jpeg" alt="" style="width: 100%">
             <h2>what we sell</h2>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dignissimos distinctio et, ex
-                exercitationem id mollitia perspiciatis, qui rem sequi sint, voluptatibus. Consequuntur ducimus eligendi
-                iusto nam qui rem suscipit!</p>
+            <p>At our junk store, we offer a unique and constantly changing selection of items that will appeal to those who appreciate the beauty in the unique and unusual. We have a wide range of reclaimed, vintage and one-of-a-kind items available. You will find rustic furniture and home decor, vintage collectibles, and a variety of unique trinkets, knick-knacks and curiosities. Whether you are looking for something specific or just browsing, we're sure you'll find something you love among our selection of hand-picked and carefully curated items.</p>
         </div>
         <div class="who">
             <img src="${pageContext.request.contextPath}/img/Garage-sale.png" style="width: 100%">
             <h2>who we are</h2>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, commodi consectetur ea enim esse, fuga
-                magnam necessitatibus nobis, quaerat quia repellat rerum temporibus vel voluptate voluptatem. Corporis
-                quibusdam recusandae sed.</p>
+            <p>We are a team of passionate individuals who believe that beauty can be found in the most unexpected places. Our store is a treasure trove of unique and one-of-a-kind items that have been carefully selected and curated. Each piece has a story to tell and we take pride in giving new life to these forgotten items. We are always on the hunt for new and exciting pieces to add to our collection, and we strive to make sure that our store is a constantly changing and evolving. We're more than just a store, we are a community of people who share a love of the unique and the unusual.</p>
         </div>
     </div>
 </div>
 <hr>
 <div class="tagline">
     <div class="tag">
-        <h2 class="tagTxt">-THIS IS WHERE A TAGLINE GOES-</h2>
+        <h2 class="tagTxt">-ONE PERSONS JUNK IS ANOTHER PERSONS TREASURE-</h2>
     </div>
 </div>
 <hr style="width: 400px">
