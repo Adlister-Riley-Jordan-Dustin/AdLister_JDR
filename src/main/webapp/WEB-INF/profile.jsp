@@ -39,8 +39,8 @@
                     <div class="modal-content">
                         <span class="close-modal" id="close-modal">&times;</span>
                         <form action="/profile" method="post">
-                            <label for="updateAd">Update Ad</label>
-                            <input type="text" name="updateAd" id="updateAd">
+                            <label for="updateTitle">Update Ad</label>
+                            <input type="text" name="updateTitle" id="updateTitle">
                             <br>
                             <label for="updateDescription">Update Description</label>
                             <input type="text" name="updateDescription" id="updateDescription">

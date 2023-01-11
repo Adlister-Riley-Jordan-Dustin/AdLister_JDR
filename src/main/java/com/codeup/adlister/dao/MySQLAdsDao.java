@@ -92,6 +92,28 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error finding a ad by user id", e);
         }
     }
+    public List<Ad> findByTitle (String title) {
+        String query = "SELECT * FROM ads WHERE title = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, title);
+            return createAdsFromResults(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding a ad by title", e);
+        }
+    }
+    public void updateAd (String title, String description, String addTitle) {
+        String query = "update ads set title = ?, description = ? where title = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, title);
+            stmt.setString(2, description);
+            stmt.setString(3, addTitle);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding a user by username", e);
+        }
+    }
 
 }
 

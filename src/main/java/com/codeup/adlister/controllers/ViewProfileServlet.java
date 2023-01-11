@@ -1,5 +1,6 @@
 package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 import javax.servlet.ServletException;
@@ -31,6 +32,13 @@ public class ViewProfileServlet extends HttpServlet {
         DaoFactory.getUsersDao().updateByUsername(username,email, user.getUsername());
         User newUser = DaoFactory.getUsersDao().findByUsername(username);
         request.getSession().setAttribute("user", newUser);
+
+        String title = request.getParameter("updateTitle");
+        String description = request.getParameter("updateDescription");
+        Ad newTitle = (Ad) DaoFactory.getAdsDao().findByTitle(title);
+        DaoFactory.getAdsDao().updateAd(title, description, newTitle.getTitle());
+        request.getSession().setAttribute("ad", newTitle);
+
 
         System.out.println(username);
         System.out.println(email);
