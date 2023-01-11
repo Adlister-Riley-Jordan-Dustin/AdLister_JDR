@@ -45,8 +45,8 @@
         font-size: 150px;
         letter-spacing: 25px;
         padding: 10px;
-        color: darkorange;
-        text-shadow:  1px 7px 2px #d22d09;
+        color: #ffc37b;
+        text-shadow:  1px 7px 2px #e7421f;
     }
     .container{
         display: flex;
@@ -185,7 +185,7 @@
         font-size: 50px;
         letter-spacing: 25px;
         padding: 10px;
-        color: darkorange;
+        color: #ffc37b;
         text-shadow:  2px 7px 2px #d22d09;
     }
     label{
@@ -216,7 +216,7 @@
         font-size: 50px;
         letter-spacing: 25px;
         padding: 10px;
-        color: darkorange;
+        color: #ffc37b;
         text-shadow:  2px 3px 4px #d22d09;
     }
 /*    END OF REGISTER PAGE */
@@ -230,7 +230,7 @@
         font-size: 50px;
         letter-spacing: 25px;
         padding: 10px;
-        color: darkorange;
+        color: #ffc37b;
         text-shadow:  2px 3px 4px #d22d09;
     }
     .profile-info{
@@ -264,7 +264,7 @@
         font-size: 50px;
         letter-spacing: 25px;
         padding: 10px;
-        color: darkorange;
+        color: #ffc37b;
         text-shadow:  2px 3px 4px #d22d09;
         text-align: center;
     }

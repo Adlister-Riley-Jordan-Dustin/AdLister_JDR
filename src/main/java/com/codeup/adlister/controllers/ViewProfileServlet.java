@@ -1,5 +1,6 @@
 package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 import javax.servlet.ServletException;
@@ -24,18 +25,26 @@ public class ViewProfileServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        String username = request.getParameter("updateUsername");
-        String email = request.getParameter("updateEmail");
-        User user = (User) request.getSession().getAttribute("user");
-        DaoFactory.getUsersDao().updateByUsername(username,email, user.getUsername());
-        User newUser = DaoFactory.getUsersDao().findByUsername(username);
-        request.getSession().setAttribute("user", newUser);
-
-        System.out.println(username);
-        System.out.println(email);
-        System.out.println(user.getUsername());
-//        request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
+        if (request.getParameter("updateUser") != null) {
+//            to create a new user
+            String username = request.getParameter("updateUsername");
+            String email = request.getParameter("updateEmail");
+            User user = (User) request.getSession().getAttribute("user");
+            DaoFactory.getUsersDao().updateByUsername(username, email, user.getUsername());
+            User newUser = DaoFactory.getUsersDao().findByUsername(username);
+            request.getSession().setAttribute("user", newUser);
+        }else if (request.getParameter("updateAd") != null) {
+            String title = request.getParameter("updateTitle");
+            String description = request.getParameter("updateDescription");
+            Long id = Long.valueOf(request.getParameter("updateAd"));
+            DaoFactory.getAdsDao().updateAd(title, description, id);
+            request.getSession().setAttribute("ad", id);
+        } else if (request.getParameter("deleteAd") != null) {
+            System.out.println(request.getParameter("delete"));
+            Long id = Long.valueOf(request.getParameter("deleteAd"));
+            DaoFactory.getAdsDao().deleteAd(id);
+            System.out.println(id);
+        }
         response.sendRedirect("/profile");
     }
 }
