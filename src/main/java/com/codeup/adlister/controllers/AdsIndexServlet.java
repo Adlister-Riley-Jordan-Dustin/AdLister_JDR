@@ -22,29 +22,17 @@ public class AdsIndexServlet extends HttpServlet {
             request.setAttribute("ads", request.getSession().getAttribute("ads"));
         }
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
-        /*
-            Seudo Code cuz im lost
-                 DONE  Create a search bar in the JSP
-                            attach search bar input to ads DB
-              Half done?    compare user input to ads titles in DB
-                                     |  String sql = "Select * FROM ads WHERE title LIKE ?";  |
-                             Display results from comparison
-        */
     }
+
         protected void doPost (HttpServletRequest request, HttpServletResponse response) throws IOException {
         String searchAd = null;
         searchAd = request.getParameter("adBar");
-        request.getSession().setAttribute("ads", DaoFactory.getAdsDao().search(searchAd));
-
-
-         /*   DaoFactory.getAdsDao().search(searchAd);*/
-            System.out.println("Testing do post");
-            System.out.println(searchAd);
-        /*    response.getWriter().println("testing post");
-            response.getWriter().println(searchAd);*/
+        if (DaoFactory.getAdsDao().search(searchAd) == null){
             response.sendRedirect("/ads");
         }
-
+        request.getSession().setAttribute("ads", DaoFactory.getAdsDao().search(searchAd));
+            response.sendRedirect("/ads");
+        }
     }
 
 
