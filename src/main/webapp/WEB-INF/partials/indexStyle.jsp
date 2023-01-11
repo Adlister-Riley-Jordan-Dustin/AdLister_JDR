@@ -107,6 +107,7 @@
       padding: 100px;
       text-align: center;
       opacity: 30%;
+      animation: fadeIn 5s;
   }
   .tagTxt{
       font-size: 20px;
@@ -216,7 +217,40 @@
         letter-spacing: 25px;
         padding: 10px;
         color: darkorange;
-        text-shadow:  2px 2px 3px #d22d09;
+        text-shadow:  2px 3px 4px #d22d09;
+    }
+/*    END OF REGISTER PAGE */
+/*    START OF PROFILE*/
+    .profile{
+        display: flex;
+        flex-direction: column;
+        padding: 100px;
+    }
+    .welcome{
+        font-size: 50px;
+        letter-spacing: 25px;
+        padding: 10px;
+        color: darkorange;
+        text-shadow:  2px 3px 4px #d22d09;
+    }
+    .profile-info{
+        font-size: 18px;
+        letter-spacing: 5px;
+        color: #d22d09;
+    }
+    .username{
+        font-size: 18px;
+        letter-spacing: 5px;
+        color: #d22d09;
+    }
+    .email{
+        font-size: 18px;
+        letter-spacing: 5px;
+        color: #d22d09;
+    }
+    #ads-three{
+        display: flex;
+        flex-direction: row;
     }
 
 </style>
