@@ -8,7 +8,7 @@
 
         <ul class="nav navbar-nav navbar-right">
             <%--<input type="text" id="search" placeholder="search">--%>
-                <form method="POST" action="/ads">
+                <form method="POST" action="/ads/search">
                     <label for="searchBar"> Ad Search</label>
                     <input  type="search" id="searchBar" name="adBar" placeholder="Search for Ads">
                 </form>
