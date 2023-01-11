@@ -1,6 +1,8 @@
 package com.codeup.adlister.dao;
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
+
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -112,6 +114,16 @@ public class MySQLAdsDao implements Ads {
             stmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error finding a user by username", e);
+        }
+    }
+    public void deleteAd (Long id){
+        String query = "delete FROM ads WHERE id = ?";
+        try{
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, id);
+            stmt.executeUpdate();
+        }catch (SQLException e){
+            throw new RuntimeException("Error deleting ads by id", e);
         }
     }
 

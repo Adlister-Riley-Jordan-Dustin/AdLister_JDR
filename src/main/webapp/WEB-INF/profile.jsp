@@ -31,6 +31,9 @@
     <div class="ads" id="ads-three">
         <c:forEach var="ad" items="${ads}">
             <div class="ads" id="ads">
+                <form action="/profile" method="post">
+                <button type="submit" value="${ad.id}" name="deleteAd" class="delete" id="delete">delete</button>
+                </form>
                 <h2>${ad.title}</h2>
                 <hr>
                 <p>${ad.description}</p>

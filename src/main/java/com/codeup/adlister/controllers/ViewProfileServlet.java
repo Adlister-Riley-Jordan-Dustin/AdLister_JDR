@@ -34,15 +34,15 @@ public class ViewProfileServlet extends HttpServlet {
             User newUser = DaoFactory.getUsersDao().findByUsername(username);
             request.getSession().setAttribute("user", newUser);
         }else if (request.getParameter("updateAd") != null) {
-//            to create a new add
             String title = request.getParameter("updateTitle");
             String description = request.getParameter("updateDescription");
             Long id = Long.valueOf(request.getParameter("updateAd"));
-//            Ad ad = (Ad) request.getSession().getAttribute("ad");
             DaoFactory.getAdsDao().updateAd(title, description, id);
             request.getSession().setAttribute("ad", id);
-//            testing with souts
-            System.out.println(title);
+        } else if (request.getParameter("deleteAd") != null) {
+            System.out.println(request.getParameter("delete"));
+            Long id = Long.valueOf(request.getParameter("deleteAd"));
+            DaoFactory.getAdsDao().deleteAd(id);
             System.out.println(id);
         }
         response.sendRedirect("/profile");
