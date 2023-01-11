@@ -13,7 +13,7 @@
 <div class="container">
     <div class="description">
         <div class="about">
-            <img src="${pageContext.request.contextPath}/WEB-INF/img/IMG_1251.jpeg">
+            <img src="${pageContext.request.contextPath}/img/Garage-sale.png" alt="" style="width: 100%">
             <h2>what we do</h2>
             <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eligendi excepturi facilis fugiat minus
@@ -21,7 +21,7 @@
                 ratione sequi ullam.</p>
         </div>
         <div class="sell">
-            <img src="${pageContext.request.contextPath}/WEB-INF/img/IMG_1251.jpeg" alt="" sizes="100">
+            <img src="${pageContext.request.contextPath}/img/l9qx5sefaygqnksstkrt.jpeg" alt="" style="width: 100%">
             <h2>what we sell</h2>
             <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur dignissimos distinctio et, ex
@@ -29,7 +29,7 @@
                 iusto nam qui rem suscipit!</p>
         </div>
         <div class="who">
-            <img src="${pageContext.request.contextPath}/WEB-INF/img/IMG_1251.jpeg">
+            <img src="${pageContext.request.contextPath}/img/Garage-sale.png" style="width: 100%">
             <h2>who we are</h2>
             <hr>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, commodi consectetur ea enim esse, fuga

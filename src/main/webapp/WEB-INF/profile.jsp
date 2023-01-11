@@ -29,29 +29,51 @@
         </div>
     </div>
     <div class="ads" id="ads-three">
-    <c:forEach var="ad" items="${ads}">
-        <div class="ads" id="ads">
-            <h2>${ad.title}</h2>
-            <hr>
-            <p>${ad.description}</p>
-            <button id="update-btn">Update Ad</button>
-            <div class="modal" id="modal">
-                <div class="modal-content">
-                    <span class="close-modal">&times;</span>
-                    <form action="/profile" method="post">
-                        <label for="updateAd">Update Ad</label>
-                        <input type="text" name="updateAd" id="updateAd">
-                        <br>
-                        <label for="updateDescription">Update Description</label>
-                        <input type="text" name="updateDescription" id="updateDescription">
-                        <br>
-                        <input type="submit" value="update">
-                    </form>
+        <c:forEach var="ad" items="${ads}">
+            <div class="ads" id="ads">
+                <h2>${ad.title}</h2>
+                <hr>
+                <p>${ad.description}</p>
+                <button id="update-btn">Update Ad</button>
+                <div class="modal" id="modal">
+                    <div class="modal-content">
+                        <span class="close-modal" id="close-modal">&times;</span>
+                        <form action="/profile" method="post">
+                            <label for="updateAd">Update Ad</label>
+                            <input type="text" name="updateAd" id="updateAd">
+                            <br>
+                            <label for="updateDescription">Update Description</label>
+                            <input type="text" name="updateDescription" id="updateDescription">
+                            <br>
+                            <input type="submit" value="update">
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </c:forEach>
+        </c:forEach>
     </div>
+    <script>
+
+        window.addEventListener("load", (e) =>{
+            console.log("hello")
+
+            const modal = document.getElementById("modal");
+            const updateBtn = document.getElementById("update-btn");
+            const closeModal = document.getElementById("close-modal");
+
+
+            updateBtn.addEventListener("click", function() {
+                modal.style.display = "block";
+            });
+
+            closeModal.addEventListener("click", function() {
+                modal.style.display = "none";
+            });
+
+        })
+
+    </script>
+    <script src="${pageContext.request.contextPath}/js/modal_js.js"></script>
 </div>
 </body>
 </html>

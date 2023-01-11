@@ -33,6 +33,7 @@ public class AdsIndexServlet extends HttpServlet {
         request.getSession().setAttribute("ads", DaoFactory.getAdsDao().search(searchAd));
             response.sendRedirect("/ads");
         }
+        
     }
 
 
