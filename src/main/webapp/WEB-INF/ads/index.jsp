@@ -10,25 +10,26 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <jsp:include page="/WEB-INF/partials/indexStyle.jsp"/>
 <h1 class="logo">JUNK LISTER</h1>
+<p class="not-that">not that kind....</p>
 <div class="container">
     <div class="description">
         <div class="about">
             <img src="${pageContext.request.contextPath}/img/Garage-sale.png" alt="" style="width: 100%">
             <h2>what we do</h2>
             <hr>
-            <p>At our junk store, we specialize in providing a unique shopping experience for those who appreciate the beauty in the unique and unusual. We offer a wide range of reclaimed, vintage, and one-of-a-kind items that are sure to add character and personality to any space. From rustic furniture and home decor to vintage collectibles and unique trinkets, we have something for everyone. Our store is constantly changing and evolving, as we are always on the hunt for new and exciting pieces to add to our collection. Come visit us and see for yourself why we're the destination for those who appreciate the beauty in the unexpected.</p>
+            <p>At our junk store, we specialize in providing a unique shopping experience for those who appreciate the beauty in the unique and unusual. We offer a wide range of reclaimed, vintage, and one-of-a-kind items that are sure to add character and personality to any space.</p>
         </div>
         <div class="sell">
             <img src="${pageContext.request.contextPath}/img/l9qx5sefaygqnksstkrt.jpeg" alt="" style="width: 100%">
             <h2>what we sell</h2>
             <hr>
-            <p>At our junk store, we offer a unique and constantly changing selection of items that will appeal to those who appreciate the beauty in the unique and unusual. We have a wide range of reclaimed, vintage and one-of-a-kind items available. You will find rustic furniture and home decor, vintage collectibles, and a variety of unique trinkets, knick-knacks and curiosities. Whether you are looking for something specific or just browsing, we're sure you'll find something you love among our selection of hand-picked and carefully curated items.</p>
+            <p>At our junk store, we offer a unique and constantly changing selection of items that will appeal to those who appreciate the beauty in the unique and unusual. We have a wide range of reclaimed, vintage and one-of-a-kind items available. Whether you are looking for something specific or just browsing, we're sure you'll find something you love among our selection of hand-picked and carefully curated items.</p>
         </div>
         <div class="who">
             <img src="${pageContext.request.contextPath}/img/Garage-sale.png" style="width: 100%">
             <h2>who we are</h2>
             <hr>
-            <p>We are a team of passionate individuals who believe that beauty can be found in the most unexpected places. Our store is a treasure trove of unique and one-of-a-kind items that have been carefully selected and curated. Each piece has a story to tell and we take pride in giving new life to these forgotten items. We are always on the hunt for new and exciting pieces to add to our collection, and we strive to make sure that our store is a constantly changing and evolving. We're more than just a store, we are a community of people who share a love of the unique and the unusual.</p>
+            <p>We are a team of passionate individuals who believe that beauty can be found in the most unexpected places. Our store is a treasure trove of unique and one-of-a-kind items that have been carefully selected and curated. Each piece has a story to tell and we take pride in giving new life to these forgotten items.</p>
         </div>
     </div>
 </div>

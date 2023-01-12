@@ -14,6 +14,7 @@
 <style>
     *{
         font-family: monospace;
+        font-size: 14px;
     }
     .nav{
         color: darkorange;
@@ -48,6 +49,10 @@
         color: #ffc37b;
         text-shadow:  1px 7px 2px #e7421f;
     }
+    .not-that{
+        align-items: center;
+        text-align: center;
+    }
     .container{
         display: flex;
         flex-wrap: wrap;
@@ -81,6 +86,10 @@
       display: flex;
       flex-direction: row;
       padding:30px;
+      font-size: 12px;
+  }
+  .description>*{
+      flex: 3 3 300px
   }
   .about{
       margin: 10px;
@@ -135,7 +144,11 @@
   }
     #ads-two{
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
+    }
+    #ads-two>*{
+        flex: 3 3 200px
     }
     footer{
         color: darkorange;
@@ -275,8 +288,9 @@
         box-shadow:   1px 2px 2px 2px #d22d09;
         border-style: none;
         height: 100px;
-        width: 260px;
+        width: 360px;
         margin: 10px;
+        padding: 10px;
     }
 
 /*    MODAL ON PROFILE PAGE*/
