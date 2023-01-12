@@ -25,6 +25,7 @@ public class ViewProfileServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println(request.getParameter("updateAd"));
         if (request.getParameter("updateUser") != null) {
 //            to create a new user
             String username = request.getParameter("updateUsername");
@@ -34,9 +35,9 @@ public class ViewProfileServlet extends HttpServlet {
             User newUser = DaoFactory.getUsersDao().findByUsername(username);
             request.getSession().setAttribute("user", newUser);
         }else if (request.getParameter("updateAd") != null) {
+            Long id = Long.valueOf(request.getParameter("updateAd"));
             String title = request.getParameter("updateTitle");
             String description = request.getParameter("updateDescription");
-            Long id = Long.valueOf(request.getParameter("updateAd"));
             DaoFactory.getAdsDao().updateAd(title, description, id);
             request.getSession().setAttribute("ad", id);
         } else if (request.getParameter("deleteAd") != null) {

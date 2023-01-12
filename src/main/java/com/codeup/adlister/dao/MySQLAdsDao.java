@@ -112,7 +112,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setLong(3, id);
             stmt.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException("Error finding a user by username", e);
+            throw new RuntimeException("Error finding a user by id", e);
         }
     }
     public void deleteAd (Long id){
